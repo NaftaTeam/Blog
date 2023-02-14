@@ -1,9 +1,9 @@
 import express from "express";
-import router from "./routers/index.js";
-import userRouter from "./routers/users.js"
+import router from "./routers/index.router.js";
+import userRouter from "./routers/users.router.js"
 import mongoose from "mongoose";
 
-import User from "./schemas/user.schema.js"
+import User from "./models/user.model.js"
 
 const app = express();
 
