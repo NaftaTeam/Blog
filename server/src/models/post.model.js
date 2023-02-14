@@ -1,0 +1,20 @@
+import {Schema, model} from "mongoose";
+import UserModel from "./user.model.js";
+
+const postModel = new Schema({
+    user: {
+        type: UserModel,
+        required: true
+    },
+    title: {
+        type: String,
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    },
+    Date: Date
+})
+
+export default model('Post', postModel);
