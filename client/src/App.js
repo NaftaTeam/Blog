@@ -1,7 +1,9 @@
+import HederInfo from "./components/heder-info/heder-info.jsx";
+
 function App() {
   return (
     <div className="App">
-      <p>Hello</p>]
+      <HederInfo></HederInfo>
 
     </div>
   );
