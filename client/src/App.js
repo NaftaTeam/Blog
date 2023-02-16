@@ -1,12 +1,10 @@
-import HederInfo from "./components/heder-info/heder-info.jsx";
+import HeaderInfo from './components/header-info/header-info.jsx';
 
 function App() {
   return (
     <div className="App">
-      <HederInfo></HederInfo>
-
+      <HeaderInfo></HeaderInfo>
     </div>
   );
 }
-// i like merge all branch)
 export default App;
