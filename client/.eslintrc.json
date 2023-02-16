@@ -13,9 +13,9 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "ignorePatterns": ["index.js"],
     "plugins": [
         "react"
     ],
-    "rules": {
-    }
+    "rules": {}
 }
