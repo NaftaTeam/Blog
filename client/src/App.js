@@ -6,5 +6,5 @@ function App() {
     </div>
   );
 }
-// i like merge 1 branch)
+// i like merge all branch)
 export default App;
