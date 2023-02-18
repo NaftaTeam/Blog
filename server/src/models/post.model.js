@@ -3,7 +3,7 @@ import UserModel from "./user.model.js";
 
 const postModel = new Schema({
     user: {
-        type: UserModel,
+        type: UserModel.schema,
         required: true
     },
     title: {
@@ -14,7 +14,10 @@ const postModel = new Schema({
         type: String,
         required: true
     },
-    Date: Date
-})
+    Date: {
+        type: Date,
+        default: Date.now()
+    }
+});
 
 export default model('Post', postModel);
