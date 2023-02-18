@@ -4,16 +4,13 @@ import bodyParser from 'body-parser';
 
 const router = new Router();
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const jsonParser = bodyParser.json();
 
-router.use(urlencodedParser);
 router.use(jsonParser);
 
-router.route('/user')
-    .get(userController.getUsers)
-    .post(userController.createUser)
-    .put(userController.updateUser)
-    .delete(userController.deleteUser)
+router.get('/user', userController.getUsers)
+router.post('/user', userController.createUser)
+router.put('/user/:id', userController.updateUser)
+router.delete('/user/:id', userController.deleteUser)
 
 export default router;

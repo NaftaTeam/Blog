@@ -15,13 +15,13 @@ export default {
         });
     },
     updateUser: async(req, res) => {
-        await UserModel.findByIdAndUpdate(req.body.id, {name: {first: req.body.first, last: req.body.last}});
+        await UserModel.findByIdAndUpdate(req.params.id, {name: {first: req.body.first, last: req.body.last}});
         res.json({
             message: "Updated"
         });
     },
     deleteUser: async(req, res) => {
-        await UserModel.deleteMany({nickname: "Pevey"});
+        await UserModel.findByIdAndDelete(req.params.id);
         res.json({
             message: "Deleted"
         });
