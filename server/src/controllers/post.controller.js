@@ -1,14 +1,33 @@
+import PostModel from "../models/post.model.js";
+import UserModel from "../models/user.model.js";
+
 export default {
-    getPosts: (req, res) => {
-
+    getPosts: async(req, res) => {
+        res.json(await PostModel.find({}));
     },
-    createPost: (req, res) => {
-
+    createPost: async(req, res) => {
+        await PostModel.create({
+            user: await UserModel.findById(req.params.id),
+            title: req.body.title,
+            text: req.body.text
+        });
+        res.json({
+            message: 'Added'
+        });
     },
-    updatePost: (req, res) => {
-
+    updatePost: async(req, res) => {
+        await PostModel.findByIdAndUpdate(req.params.id, {
+            title: req.body.title,
+            text: req.body.text
+        });
+        res.json({
+            message: "Updated"
+        });
     },
-    deletePost: (req, res) => {
-
+    deletePost: async(req, res) => {
+        await PostModel.findByIdAndDelete(req.params.id);
+        res.json({
+            message: 'Deleted'
+        });
     }
 }
