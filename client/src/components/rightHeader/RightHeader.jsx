@@ -1,15 +1,11 @@
 import React from 'react';
 import './RightHeader.css';
-import profile from '../../img/profile.png';
-
-const imgStyle = {
-  backgroundColor: 'white',
-};
+import Profile from '../profile/Profile';
 
 export default function RightHeader() {
   return (
     <div className="RightHeader">
-      <img src={profile} alt="" width={40} height={40} style={imgStyle} />
+      <Profile />
     </div>
   );
 }
