@@ -1,11 +1,13 @@
 import React from 'react';
-import Logo from '../logo/Logo';
 import './Header.css';
+import LeftHeader from '../leftHeader/LeftHeader';
+import RightHeader from '../rightHeader/RightHeader';
 
 export default function Header() {
   return (
     <div className="Header">
-      <Logo />
+      <LeftHeader />
+      <RightHeader />
     </div>
   );
 }
